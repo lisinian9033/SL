@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.dao.UploadTempDao">
+  <resultMap id="BaseResultMap" type="com.jbit.entity.UploadTemp">
+    <result column="uploader" jdbcType="VARCHAR" property="uploader" />
+    <result column="uploadType" jdbcType="VARCHAR" property="uploadtype" />
+    <result column="uploadFilePath" jdbcType="VARCHAR" property="uploadfilepath" />
+  </resultMap>
+</mapper>

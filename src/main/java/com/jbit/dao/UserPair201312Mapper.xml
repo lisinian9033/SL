@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.dao.UserPair201312Dao">
+  <resultMap id="BaseResultMap" type="com.jbit.entity.UserPair201312">
+    <id column="PAIR_ID" jdbcType="VARCHAR" property="pairId" />
+    <result column="DATE" jdbcType="DATE" property="date" />
+    <result column="BONUS_USER_ID" jdbcType="VARCHAR" property="bonusUserId" />
+    <result column="LEFT_USER" jdbcType="DECIMAL" property="leftUser" />
+    <result column="RIGHT_USER" jdbcType="DECIMAL" property="rightUser" />
+    <result column="LEFT_KEEP" jdbcType="DECIMAL" property="leftKeep" />
+    <result column="RIGHT_KEEP" jdbcType="DECIMAL" property="rightKeep" />
+    <result column="EACH_PV" jdbcType="DECIMAL" property="eachPv" />
+    <result column="SUM_PAIR_PV" jdbcType="DECIMAL" property="sumPairPv" />
+    <result column="BONUS_RATE" jdbcType="DECIMAL" property="bonusRate" />
+    <result column="BONUS_PV" jdbcType="DECIMAL" property="bonusPv" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    PAIR_ID, DATE, BONUS_USER_ID, LEFT_USER, RIGHT_USER, LEFT_KEEP, RIGHT_KEEP, EACH_PV, 
+    SUM_PAIR_PV, BONUS_RATE, BONUS_PV
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_pair_201312
+    where PAIR_ID = #{pairId,jdbcType=VARCHAR}
+  </select>
+</mapper>

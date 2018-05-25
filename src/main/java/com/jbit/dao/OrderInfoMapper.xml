@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.dao.OrderInfoDao">
+  <resultMap id="BaseResultMap" type="com.jbit.entity.OrderInfo">
+    <id column="ORDER_ID" jdbcType="VARCHAR" property="orderId" />
+    <result column="LIST_ID" jdbcType="VARCHAR" property="listId" />
+    <result column="ORDER_TIME" jdbcType="DATE" property="orderTime" />
+    <result column="ORDER_SN" jdbcType="VARCHAR" property="orderSn" />
+    <result column="PICK_USER_ID" jdbcType="VARCHAR" property="pickUserId" />
+    <result column="REPEAT_PV" jdbcType="DECIMAL" property="repeatPv" />
+    <result column="BASE_PV" jdbcType="DECIMAL" property="basePv" />
+    <result column="SERVICE_FEE" jdbcType="DECIMAL" property="serviceFee" />
+    <result column="SHIP_FRE" jdbcType="DECIMAL" property="shipFre" />
+    <result column="TAX" jdbcType="DECIMAL" property="tax" />
+    <result column="COUNTRY" jdbcType="VARCHAR" property="country" />
+    <result column="TEL" jdbcType="VARCHAR" property="tel" />
+    <result column="MOBILE" jdbcType="VARCHAR" property="mobile" />
+    <result column="EMAIL" jdbcType="VARCHAR" property="email" />
+    <result column="USER_ADDRESS" jdbcType="VARCHAR" property="userAddress" />
+    <result column="POSTCODE" jdbcType="VARCHAR" property="postcode" />
+    <result column="STAT" jdbcType="DECIMAL" property="stat" />
+    <result column="SHIP_TYPE" jdbcType="VARCHAR" property="shipType" />
+    <result column="SHIP_NUM" jdbcType="VARCHAR" property="shipNum" />
+    <result column="SHIP_TIME" jdbcType="DATE" property="shipTime" />
+    <result column="RECEIVE_TIME" jdbcType="DATE" property="receiveTime" />
+    <result column="SHIP_NOTE" jdbcType="VARCHAR" property="shipNote" />
+    <result column="buy_user_id" jdbcType="VARCHAR" property="buyUserId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    ORDER_ID, LIST_ID, ORDER_TIME, ORDER_SN, PICK_USER_ID, REPEAT_PV, BASE_PV, SERVICE_FEE, 
+    SHIP_FRE, TAX, COUNTRY, TEL, MOBILE, EMAIL, USER_ADDRESS, POSTCODE, STAT, SHIP_TYPE, 
+    SHIP_NUM, SHIP_TIME, RECEIVE_TIME, SHIP_NOTE, buy_user_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from order_info
+    where ORDER_ID = #{orderId,jdbcType=VARCHAR}
+  </select>
+</mapper>

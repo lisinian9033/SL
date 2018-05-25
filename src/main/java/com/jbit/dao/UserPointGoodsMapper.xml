@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.dao.UserPointGoodsDao">
+  <resultMap id="BaseResultMap" type="com.jbit.entity.UserPointGoods">
+    <id column="POINT_GOODS_ID" jdbcType="VARCHAR" property="pointGoodsId" />
+    <result column="PICK_TIME" jdbcType="DATE" property="pickTime" />
+    <result column="USER_ID" jdbcType="VARCHAR" property="userId" />
+    <result column="BUY_PV" jdbcType="DECIMAL" property="buyPv" />
+    <result column="ORDER_ID" jdbcType="VARCHAR" property="orderId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    POINT_GOODS_ID, PICK_TIME, USER_ID, BUY_PV, ORDER_ID
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_point_goods
+    where POINT_GOODS_ID = #{pointGoodsId,jdbcType=VARCHAR}
+  </select>
+</mapper>

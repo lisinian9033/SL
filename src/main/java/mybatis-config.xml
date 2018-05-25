@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--包名映射 -->
+    <typeAliases>
+	  <package name="com.jbit.entity"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="com/jbit/dao/AfficheMapper.xml" />
+		<mapper resource="com/jbit/dao/AuAuthorityMapper.xml" />
+		<mapper resource="com/jbit/dao/AuFunctionMapper.xml" />
+		<mapper resource="com/jbit/dao/AuRroleMapper.xml" />
+		<mapper resource="com/jbit/dao/AuUserMapper.xml" />
+		<mapper resource="com/jbit/dao/BasicsParameterMapper.xml" />
+		<mapper resource="com/jbit/dao/DataDictionaryMapper.xml" />
+		<mapper resource="com/jbit/dao/GoodsIinfoMapper.xml" />
+		<mapper resource="com/jbit/dao/GoodsPackAffiliatedMapper.xml" />
+		<mapper resource="com/jbit/dao/GoodsPackMapper.xml" />
+		<mapper resource="com/jbit/dao/InfoAnnexesMapper.xml" />
+		<mapper resource="com/jbit/dao/InforMationMapper.xml" />
+		<mapper resource="com/jbit/dao/InvenToryMapper.xml" />
+		<mapper resource="com/jbit/dao/LeaveMessageMapper.xml" />
+		<mapper resource="com/jbit/dao/MultiLlanMapper.xml" />
+		<mapper resource="com/jbit/dao/OrderInfoMapper.xml" />
+		<mapper resource="com/jbit/dao/OrderListMapper.xml" />
+		<mapper resource="com/jbit/dao/ReplyMapper.xml" />
+		<mapper resource="com/jbit/dao/UploadTempMapper.xml" />
+		<mapper resource="com/jbit/dao/UserAccount201312Mapper.xml" />
+		<mapper resource="com/jbit/dao/UserAccount201404Mapper.xml" />
+		<mapper resource="com/jbit/dao/UserAccountLog201404Mapper.xml" />
+		<mapper resource="com/jbit/dao/UserBuyBonusMapper.xml" />
+		<mapper resource="com/jbit/dao/UserBuyMapper.xml" />
+		<mapper resource="com/jbit/dao/UserPair201312Mapper.xml" />
+		<mapper resource="com/jbit/dao/UserPlaceMapper.xml" />
+		<mapper resource="com/jbit/dao/UserPointGoodsMapper.xml" />
+		<mapper resource="com/jbit/dao/UserPointMapper.xml" />
+		<mapper resource="com/jbit/dao/UserRechargeMapper.xml" />
+		<mapper resource="com/jbit/dao/UserReferMapper.xml" />
+		<mapper resource="com/jbit/dao/UuserCashMapper.xml" />
+	</mappers>
+</configuration>

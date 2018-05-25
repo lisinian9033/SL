@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.dao.UserBuyDao">
+  <resultMap id="BaseResultMap" type="com.jbit.entity.UserBuy">
+    <id column="BUY_ID" jdbcType="VARCHAR" property="buyId" />
+    <result column="BUY_TIME" jdbcType="DATE" property="buyTime" />
+    <result column="BONUS_USER_ID" jdbcType="VARCHAR" property="bonusUserId" />
+    <result column="USER_ID" jdbcType="VARCHAR" property="userId" />
+    <result column="BUY_PV" jdbcType="DECIMAL" property="buyPv" />
+    <result column="BONUS_RATE" jdbcType="DECIMAL" property="bonusRate" />
+    <result column="BONUS_PV" jdbcType="DECIMAL" property="bonusPv" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    BUY_ID, BUY_TIME, BONUS_USER_ID, USER_ID, BUY_PV, BONUS_RATE, BONUS_PV
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_buy
+    where BUY_ID = #{buyId,jdbcType=VARCHAR}
+  </select>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.dao.MultiLlanDao">
+  <resultMap id="BaseResultMap" type="com.jbit.entity.MultiLlan">
+    <id column="ELEMENT_ID" jdbcType="VARCHAR" property="elementId" />
+    <result column="PAGE_PATH" jdbcType="VARCHAR" property="pagePath" />
+    <result column="SCN" jdbcType="VARCHAR" property="scn" />
+    <result column="TCN" jdbcType="VARCHAR" property="tcn" />
+    <result column="EN" jdbcType="VARCHAR" property="en" />
+    <result column="JP" jdbcType="VARCHAR" property="jp" />
+    <result column="KR" jdbcType="VARCHAR" property="kr" />
+    <result column="FR" jdbcType="VARCHAR" property="fr" />
+    <result column="RA" jdbcType="VARCHAR" property="ra" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    ELEMENT_ID, PAGE_PATH, SCN, TCN, EN, JP, KR, FR, RA
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from multi_lan
+    where ELEMENT_ID = #{elementId,jdbcType=VARCHAR}
+  </select>
+</mapper>

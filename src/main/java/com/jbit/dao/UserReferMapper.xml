@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.dao.UserReferDao">
+  <resultMap id="BaseResultMap" type="com.jbit.entity.UserRefer">
+    <id column="REFER_LOG_ID" jdbcType="VARCHAR" property="referLogId" />
+    <result column="REFER_TIME" jdbcType="DATE" property="referTime" />
+    <result column="USER_ID" jdbcType="VARCHAR" property="userId" />
+    <result column="REFER_ID" jdbcType="VARCHAR" property="referId" />
+    <result column="BUY_PV" jdbcType="DECIMAL" property="buyPv" />
+    <result column="BONUS_RATE" jdbcType="DECIMAL" property="bonusRate" />
+    <result column="BONUS_PV" jdbcType="DECIMAL" property="bonusPv" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    REFER_LOG_ID, REFER_TIME, USER_ID, REFER_ID, BUY_PV, BONUS_RATE, BONUS_PV
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_refer
+    where REFER_LOG_ID = #{referLogId,jdbcType=VARCHAR}
+  </select>
+</mapper>

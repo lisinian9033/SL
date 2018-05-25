@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.dao.UuserCashDao">
+  <resultMap id="BaseResultMap" type="com.jbit.entity.UuserCash">
+    <id column="CASH_ID" jdbcType="VARCHAR" property="cashId" />
+    <result column="CASH_TIME" jdbcType="DATE" property="cashTime" />
+    <result column="CASH_NUM" jdbcType="VARCHAR" property="cashNum" />
+    <result column="USER_ID" jdbcType="VARCHAR" property="userId" />
+    <result column="CASH_PV" jdbcType="DECIMAL" property="cashPv" />
+    <result column="CURRENCY" jdbcType="VARCHAR" property="currency" />
+    <result column="PV_RATE" jdbcType="DECIMAL" property="pvRate" />
+    <result column="CASH_MONEY" jdbcType="DECIMAL" property="cashMoney" />
+    <result column="NOTE" jdbcType="VARCHAR" property="note" />
+    <result column="FEE" jdbcType="DECIMAL" property="fee" />
+    <result column="TAX" jdbcType="DECIMAL" property="tax" />
+    <result column="OTHER_FEE" jdbcType="DECIMAL" property="otherFee" />
+    <result column="BANK_NAME" jdbcType="VARCHAR" property="bankName" />
+    <result column="BANK_BRANCE" jdbcType="VARCHAR" property="bankBrance" />
+    <result column="BANK_ACCOUNT" jdbcType="VARCHAR" property="bankAccount" />
+    <result column="ACCOUNT_NAME" jdbcType="VARCHAR" property="accountName" />
+    <result column="STAT" jdbcType="DECIMAL" property="stat" />
+    <result column="CREDITED_MONEY" jdbcType="DECIMAL" property="creditedMoney" />
+    <result column="CREDITED_TIME" jdbcType="DATE" property="creditedTime" />
+    <result column="OPERATOR" jdbcType="VARCHAR" property="operator" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    CASH_ID, CASH_TIME, CASH_NUM, USER_ID, CASH_PV, CURRENCY, PV_RATE, CASH_MONEY, NOTE, 
+    FEE, TAX, OTHER_FEE, BANK_NAME, BANK_BRANCE, BANK_ACCOUNT, ACCOUNT_NAME, STAT, CREDITED_MONEY, 
+    CREDITED_TIME, OPERATOR
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_cash
+    where CASH_ID = #{cashId,jdbcType=VARCHAR}
+  </select>
+</mapper>

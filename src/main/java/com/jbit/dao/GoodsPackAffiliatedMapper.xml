@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.dao.GoodsPackAffiliatedDao">
+  <resultMap id="BaseResultMap" type="com.jbit.entity.GoodsPackAffiliated">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="goodsPackId" jdbcType="BIGINT" property="goodspackid" />
+    <result column="goodsInfoId" jdbcType="BIGINT" property="goodsinfoid" />
+    <result column="goodsNum" jdbcType="INTEGER" property="goodsnum" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, goodsPackId, goodsInfoId, goodsNum
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from goods_pack_affiliated
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+</mapper>

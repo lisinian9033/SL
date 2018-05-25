@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.dao.OrderListDao">
+  <resultMap id="BaseResultMap" type="com.jbit.entity.OrderList">
+    <id column="LIST_ID" jdbcType="VARCHAR" property="listId" />
+    <result column="GOODS_ID" jdbcType="VARCHAR" property="goodsId" />
+    <result column="GOODS_SN" jdbcType="VARCHAR" property="goodsSn" />
+    <result column="GOODS_NAME" jdbcType="VARCHAR" property="goodsName" />
+    <result column="GOODS_FORMAT" jdbcType="VARCHAR" property="goodsFormat" />
+    <result column="GOODS_NUM" jdbcType="DECIMAL" property="goodsNum" />
+    <result column="EACH_PRICE" jdbcType="DECIMAL" property="eachPrice" />
+    <result column="SUM_PRICE" jdbcType="DECIMAL" property="sumPrice" />
+    <result column="DISCOUNT" jdbcType="DECIMAL" property="discount" />
+    <result column="REAL_PRICE" jdbcType="DECIMAL" property="realPrice" />
+    <result column="CURRENCY" jdbcType="VARCHAR" property="currency" />
+    <result column="REAL_PV" jdbcType="DECIMAL" property="realPv" />
+    <result column="PV_RATE" jdbcType="DECIMAL" property="pvRate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    LIST_ID, GOODS_ID, GOODS_SN, GOODS_NAME, GOODS_FORMAT, GOODS_NUM, EACH_PRICE, SUM_PRICE, 
+    DISCOUNT, REAL_PRICE, CURRENCY, REAL_PV, PV_RATE
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from order_list
+    where LIST_ID = #{listId,jdbcType=VARCHAR}
+  </select>
+</mapper>

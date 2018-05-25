@@ -37,4 +37,4 @@ derby.log
 /dist/
 /nbdist/
 /.nb-gradle/
-*.jar
+/*.jar

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.dao.UserAccountLog201404Dao">
+  <resultMap id="BaseResultMap" type="com.jbit.entity.UserAccountLog201404">
+    <id column="accountLogId" jdbcType="BIGINT" property="accountlogid" />
+    <result column="userId" jdbcType="BIGINT" property="userid" />
+    <result column="actionTime" jdbcType="DATE" property="actiontime" />
+    <result column="actionDesc" jdbcType="VARCHAR" property="actiondesc" />
+    <result column="actionType" jdbcType="DECIMAL" property="actiontype" />
+    <result column="baseIn" jdbcType="DECIMAL" property="basein" />
+    <result column="baseOut" jdbcType="DECIMAL" property="baseout" />
+    <result column="baseBalance" jdbcType="DECIMAL" property="basebalance" />
+    <result column="repeatIn" jdbcType="DECIMAL" property="repeatin" />
+    <result column="repeatOut" jdbcType="DECIMAL" property="repeatout" />
+    <result column="repeatBalance" jdbcType="DECIMAL" property="repeatbalance" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    accountLogId, userId, actionTime, actionDesc, actionType, baseIn, baseOut, baseBalance, 
+    repeatIn, repeatOut, repeatBalance
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_account_log_201404
+    where accountLogId = #{accountlogid,jdbcType=BIGINT}
+  </select>
+</mapper>
