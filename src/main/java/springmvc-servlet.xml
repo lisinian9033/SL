@@ -16,7 +16,7 @@
 	<!--开启扫描器 context -->
 	<context:component-scan base-package="com.jbit.controller"></context:component-scan>
 
-	<!--启动Date转换器(用于日期转换) (spring-context-3.2.13.RELEASE.jar==org.springframework.context.support) -->
+	<!-- 启动Date转换器(用于日期转换) --> 
 	<bean id="MyConversionService"
 		class="org.springframework.context.support.ConversionServiceFactoryBean">
 		<property name="converters">
