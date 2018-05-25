@@ -81,7 +81,7 @@
 
 	<!--本地静态文件映射 -->
 	<mvc:resources location="/statics/" mapping="/statics/**" />
-	<mvc:resources location="/404/" mapping="/404/**" />
+	<!-- <mvc:resources location="/404/" mapping="/404/**" /> -->
 
 	<!--配置试图解析器 -->
 	<bean

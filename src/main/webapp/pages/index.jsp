@@ -9,7 +9,7 @@
 	<meta name="author" content="Muhammad Usman">
 
 	<!-- The styles -->
-	<link  href="/statics/css/bootstrap-cerulean.css" rel="stylesheet">
+	<link  href="${pageContext.request.contextPath }/statics/css/bootstrap-cerulean.css" rel="stylesheet">
 	<style type="text/css">
 	  body {
 		padding-bottom: 40px;
