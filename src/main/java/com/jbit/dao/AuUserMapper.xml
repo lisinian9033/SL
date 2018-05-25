@@ -45,4 +45,9 @@
     from au_user
     where id = #{id,jdbcType=BIGINT}
   </select>
+  
+  <!-- AuUser登录 -->
+  <select id="login" parameterType="AuUser">
+  		SELECT * FROM au_user WHERE logincode=#{logincode} AND password=#{password}
+  </select>
 </mapper>
