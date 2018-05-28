@@ -52,36 +52,32 @@
 	</mvc:annotation-driven>
 
 	<!--配置权限验证拦截器 -->
-	<!-- <mvc:interceptors>
+	 <mvc:interceptors>
 		<mvc:interceptor>
-			拦截所有 防止用户获取地址直接登陆
+			<!-- 拦截所有 防止用户获取地址直接登陆 -->
 			<mvc:mapping path="/**/**" />
-			放过不需要拦截的请求
+			<!-- 放过不需要拦截的请求 -->
 			<mvc:exclude-mapping path="/statics/**" />
-			<mvc:exclude-mapping path="/backendUserLogin/**" />
-			<mvc:exclude-mapping path="/devUserLogin/**" />
-			<mvc:exclude-mapping path="/appinfolist/**" />
-			<mvc:exclude-mapping path="/applist/**" />
-			<mvc:exclude-mapping path="/appinfoadd/**" />
+			<mvc:exclude-mapping path="/AuUserLogin/**" />
 			<mvc:exclude-mapping path="/logout/**" />
-			<mvc:exclude-mapping path="/404/**" />
+			<mvc:exclude-mapping path="/pages/**" />
 			<bean class="com.jbit.util.SysIntercepter"></bean>
 		</mvc:interceptor>
-	</mvc:interceptors> -->
+	</mvc:interceptors>
 
 	<!-- 全局异常处理 -->
 	<bean
 		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
 		<property name="exceptionMappings">
 			<props>
-				<prop key="java.lang.Exception">/404/404</prop>
+				<prop key="java.lang.Exception">/pages/404/404</prop>
 			</props>
 		</property>
 	</bean>
 
 	<!--本地静态文件映射 -->
 	<mvc:resources location="/statics/" mapping="/statics/**" />
-	<!-- <mvc:resources location="/404/" mapping="/404/**" /> -->
+	<mvc:resources location="/pages/" mapping="/pages/**" />
 
 	<!--配置试图解析器 -->
 	<bean

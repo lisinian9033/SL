@@ -70,7 +70,7 @@ $(document).ready(function(){
 	
 	/**menu add by bdqn_hl 2014-2-27 start*/
 	var result = "";
-	var json = eval('(' + tt + ')');
+	var json ="";// eval('(' + tt + ')');
 	//alert(tt);
 	//$("#jsonstr").append(tt);
 	for(var i = 0;i<json.length;i++){

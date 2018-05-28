@@ -128,9 +128,9 @@
 	<!-- library for cookie management -->
 	<script src="${pageContext.request.contextPath }/statics/js/jquery.cookie.js"></script>
 	<!-- calander plugin -->
-	<script src='${pageContext.request.contextPath }js/fullcalendar.min.js'></script>
+	<script src='${pageContext.request.contextPath }/statics/js/fullcalendar.min.js'></script>
 	<!-- data table plugin -->
-	<script src='${pageContext.request.contextPath }js/jquery.dataTables.min.js'></script>
+	<script src='${pageContext.request.contextPath }/statics/js/jquery.dataTables.min.js'></script>
 
 	<!-- chart libraries start -->
 	<script src="${pageContext.request.contextPath }/statics/js/excanvas.js"></script>
@@ -165,8 +165,7 @@
 	<!-- application script for Charisma demo -->
 	<script src="${pageContext.request.contextPath }/statics/js/charisma.js"></script>
 	<script src="${pageContext.request.contextPath }/statics/localjs/index.js"></script>
-	
-		
+    <input type="hidden" id="path" name="path" value="${pageContext.request.contextPath}"/>
 </body>
 </html>
 

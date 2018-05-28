@@ -6,28 +6,28 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jbit.entity.AuUser;
+import com.jbit.entity.JsonResult;
 import com.jbit.service.AuUserService;
 
 
 @Controller
 public class AuUserController {
-
-	
 	
 	@Resource 
 	private AuUserService auUserService;
 	
-	
+	@ResponseBody
 	@RequestMapping(value="/AuUserLogin")
-	public String AuUserLogin(AuUser auUser,Model model,HttpSession session){
+	public JsonResult AuUserLogin(AuUser auUser,Model model,HttpSession session){
+		JsonResult result = new JsonResult("登录失败！！");
 		AuUser au= auUserService.login(auUser);
 		if(au!=null){
 			session.setAttribute("AuUser", au);
-			return "pages/main.jsp";
+			result=new JsonResult(true,"登录成功！！");
 		}
-		model.addAttribute("error","登录失败");
-		return "pages/main.jsp";
+		return result;
 	}
 }
