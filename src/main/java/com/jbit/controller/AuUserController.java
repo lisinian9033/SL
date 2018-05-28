@@ -6,6 +6,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jbit.entity.AuUser;
@@ -20,7 +21,7 @@ public class AuUserController {
 	private AuUserService auUserService;
 	
 	@ResponseBody
-	@RequestMapping(value="/AuUserLogin")
+	@RequestMapping(value="/AuUserLogin",method=RequestMethod.POST)
 	public JsonResult AuUserLogin(AuUser auUser,Model model,HttpSession session){
 		JsonResult result = new JsonResult("登录失败！！");
 		AuUser au= auUserService.login(auUser);

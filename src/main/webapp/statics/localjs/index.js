@@ -15,18 +15,19 @@ $("#loginBtn").click(function(){
 		$("#formtip").html("对不起，登录密码不能为空。");
 	}else{
 		$("#formtip").html("");
-		
+		alert(1);
 		$.ajax({
 			url:path+"/AuUserLogin",
 			type: 'POST',
 			data:{user:JSON.stringify(user)},
 			dataType: "json",
-			timeout: 1000,
-			success: function(result){
-				if(result.success){//登录成功
+			success:function(result){
+				if(result.success == "success"){//登录成功
 					$("#formtip").html("登陆成功！！！");
-					window.location.href='/pages/main.html';
+					alert(2);
+					window.location.href='../pages/main.html';
 				}else{
+					alert(3);
 					$("#formtip").css("color","red");
 					$("#formtip").html("登陆失败！请重试。");
 					$("#logincode").val('');
