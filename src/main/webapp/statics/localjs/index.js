@@ -19,7 +19,7 @@ $("#loginBtn").click(function(){
 			url: '/AuUserLogin',
 			type: 'POST',
 			data:{user:JSON.stringify(user)},
-			dataType: 'jsp',
+			dataType: 'json',
 			timeout: 1000,
 			error: function(){
 				$("#formtip").css("color","red");
