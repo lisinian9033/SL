@@ -1,5 +1,4 @@
 $("#loginBtn").click(function(){
-	alert(1)
 	var path=$("#path").val();
 	var user = new Object();
 	user.loginCode = $.trim($("#logincode").val());
@@ -25,6 +24,7 @@ $("#loginBtn").click(function(){
 			timeout: 1000,
 			success: function(result){
 				if(result.success){//登录成功
+					$("#formtip").html("登陆成功！！！");
 					window.location.href='/pages/main.html';
 				}else{
 					$("#formtip").css("color","red");
