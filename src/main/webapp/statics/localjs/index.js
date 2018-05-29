@@ -3,7 +3,7 @@ $("#loginBtn").click(function(){
 	var user = new Object();
 	user.loginCode = $.trim($("#logincode").val());
 	user.password = $.trim($("#password").val());
-	user.isStart = 1;
+	/*user.isStart = 1;*/
 	
 	if(user.loginCode == "" || user.loginCode == null){
 		 $("#logincode").focus();
@@ -15,19 +15,17 @@ $("#loginBtn").click(function(){
 		$("#formtip").html("对不起，登录密码不能为空。");
 	}else{
 		$("#formtip").html("");
-		alert(1);
 		$.ajax({
 			url:path+"/AuUserLogin",
 			type: 'POST',
 			data:{user:JSON.stringify(user)},
 			dataType: "json",
 			success:function(result){
-				if(result.success == "success"){//登录成功
+				if(result.success == "true"){//登录成功
 					$("#formtip").html("登陆成功！！！");
 					alert(2);
 					window.location.href='../pages/main.html';
 				}else{
-					alert(3);
 					$("#formtip").css("color","red");
 					$("#formtip").html("登陆失败！请重试。");
 					$("#logincode").val('');

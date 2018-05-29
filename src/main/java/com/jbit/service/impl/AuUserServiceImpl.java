@@ -16,9 +16,8 @@ public class AuUserServiceImpl implements AuUserService {
 	private AuUserDao auUserDao;
 	
 	@Override
-	public AuUser login(AuUser auUser) {
-		
-		return auUserDao.login(auUser);
+	public AuUser login(AuUser user) {
+		return auUserDao.login(user);
 	}
 
 }

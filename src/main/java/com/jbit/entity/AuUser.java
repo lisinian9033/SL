@@ -63,7 +63,14 @@ public class AuUser {
 
     private String bankpicpath;
 
-    public Long getId() {
+
+	@Override
+	public String toString() {
+		return "AuUser [logincode=" + logincode + ", password=" + password
+				+ "]";
+	}
+
+	public Long getId() {
         return id;
     }
 

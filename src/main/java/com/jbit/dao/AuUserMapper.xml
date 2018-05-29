@@ -47,7 +47,7 @@
   </select>
   
   <!-- AuUser登录 -->
-  <select id="login" parameterType="AuUser">
+  <select id="login" resultType="AuUser">
   		SELECT * FROM au_user WHERE logincode=#{logincode} AND password=#{password}
   </select>
 </mapper>

@@ -9,5 +9,5 @@ public interface AuUserDao {
 	 * @param pwd
 	 * @return
 	 */
-    AuUser login(AuUser auUser);
+    AuUser login(AuUser user);
 }

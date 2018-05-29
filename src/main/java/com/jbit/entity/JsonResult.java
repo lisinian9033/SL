@@ -5,6 +5,10 @@ public class JsonResult {
 private boolean success=false;
 private String message;
 
+@Override
+public String toString() {
+	return "JsonResult [success=" + success + ", message=" + message + "]";
+}
 public JsonResult() {
 	super();
 }
