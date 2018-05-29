@@ -1,7 +1,6 @@
 $("#resetBtn").click(function(){
-	alert(0)
-	$("#logincode").val()="";
-	$("#password").val()="";
+	$("#logincode").val('');
+	$("#password").val('');
 });
 
 $("#loginBtn").click(function(){
@@ -23,7 +22,7 @@ $("#loginBtn").click(function(){
 		$("#formtip").html("");
 		$.ajax({
 			url:path+"/AuUserLogin",
-			type: 'POST',
+			type: 'GET',
 			data:{user:JSON.stringify(user)},
 			dataType: "json",
 			/*contentType: "application/json",*/

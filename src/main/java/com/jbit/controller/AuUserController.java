@@ -22,19 +22,18 @@ public class AuUserController {
 	@Resource 
 	private AuUserService auUserService;
 	
-	@RequestMapping(value="/AuUserLogin",method=RequestMethod.POST)
+	@RequestMapping(value="/AuUserLogin",method=RequestMethod.GET)
 	@ResponseBody
-	public JsonResult AuUserLogin(AuUser user,Model model,HttpSession session){
-		System.out.println("------->"+user);
+	public JsonResult AuUserLogin(@RequestBody AuUser user,Model model,HttpSession session){
+		System.out.println("------->"+user.toString());
 		JsonResult result = new JsonResult("登录失败！！");
 		AuUser au= auUserService.login(user);
 		System.out.println("------->"+au);
 		if(au!=null){
-			System.out.println("------->");
 			session.setAttribute("AuUser", au);
 			result=new JsonResult(true,"登录成功！！");
 		}
-		System.out.println("------->"+result.toString());
+		System.out.println("------->"+result);
 		return result;
 	}
 
