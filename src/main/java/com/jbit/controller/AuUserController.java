@@ -23,10 +23,11 @@ public class AuUserController {
 	@RequestMapping(value="/AuUserLogin",method=RequestMethod.POST)
 	@ResponseBody
 	public JsonResult AuUserLogin(AuUser user,Model model,HttpSession session){
+		System.out.println(user);
 		JsonResult result = new JsonResult("登录失败！！");
 		AuUser au= auUserService.login(user);
 		if(au!=null){
-			session.setAttribute("AuUser", au);
+			session.setAttribute("user", au);
 			result=new JsonResult(true,"登录成功！！");
 		}
 		return result;

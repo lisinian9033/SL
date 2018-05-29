@@ -28,23 +28,13 @@ $("#loginBtn").click(function(){
 			success:function(result){
 				if(result.success==true){//登录成功
 					alert("登陆成功！！！正在为您跳转首页，请确定....");
-					window.location.href='../pages/main.html';
+					window.location.href=path+'/pages/main.jsp';
 				}else{
 					$("#formtip").css("color","red");
 					$("#formtip").html("登陆失败！请重试。");
 					$("#logincode").val('');
 					$("#password").val('');
 				}
-				/*else if("nologincode" == result){
-					$("#formtip").css("color","red");
-					$("#formtip").html("登录账号不存在，请重试。");
-				}else if("nodata" == result){
-					$("#formtip").css("color","red");
-					$("#formtip").html("对不起，没有任何数据需要处理！请重试。");
-				}else if("pwderror" == result){
-					$("#formtip").css("color","red");
-					$("#formtip").html("登录密码错误，请重试。");
-				}*/
 			}
 			});
 	}

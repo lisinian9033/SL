@@ -15,7 +15,7 @@ public class SysIntercepter extends HandlerInterceptorAdapter {
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {
 		HttpSession session=request.getSession();
-		if(session.getAttribute("AuUser")==null){
+		if(session.getAttribute("user")==null){
 			response.sendRedirect("pages/401.jsp");
 			return false;//false阻止 
 		}

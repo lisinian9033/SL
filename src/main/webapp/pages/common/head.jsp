@@ -21,7 +21,7 @@
 	<meta name="author" content="Muhammad Usman">
 
 	<!-- The styles -->
-	<link href="/statics/css/bootstrap-cerulean.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath }/statics/css/bootstrap-cerulean.css" rel="stylesheet">
 	<style type="text/css">
 	  body {
 		padding-bottom: 40px;
@@ -38,43 +38,38 @@
 		color:black;
 	}
 	</style>
-	<link href="/statics/css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="/statics/css/charisma-app.css" rel="stylesheet">
-	<link href="/statics/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
-	<link href='/statics/css/fullcalendar.css' rel='stylesheet'>
-	<link href='/statics/css/fullcalendar.print.css' rel='stylesheet'  media='print'>
-	<link href='/statics/css/chosen.css' rel='stylesheet'>
-	<link href='/statics/css/uniform.default.css' rel='stylesheet'>
-	<link href='/statics/css/colorbox.css' rel='stylesheet'>
-	<link href='/statics/css/jquery.cleditor.css' rel='stylesheet'>
-	<link href='/statics/css/jquery.noty.css' rel='stylesheet'>
-	<link href='/statics/css/noty_theme_default.css' rel='stylesheet'>
-	<link href='/statics/css/elfinder.min.css' rel='stylesheet'>
-	<link href='/statics/css/elfinder.theme.css' rel='stylesheet'>
-	<link href='/statics/css/jquery.iphone.toggle.css' rel='stylesheet'>
-	<link href='/statics/css/opa-icons.css' rel='stylesheet'>
-	<link href='/statics/css/uploadify.css' rel='stylesheet'>
-	<!-- 华丽丽滴分割线 北大青鸟 start 2014-->
-	<!-- add by bdqn_hl 2014-2-28 start-->
-	<link href='/statics/localcss/userlist.css' rel='stylesheet'>
-	<link href='/statics/localcss/rolelist.css' rel='stylesheet'>
-	<link href='/statics/localcss/authoritymanage.css' rel='stylesheet'>
-	<link href='/statics/localcss/dicmanage.css' rel='stylesheet'>
-	<link href='/statics/localcss/affiche.css' rel='stylesheet'>
-	<link href='/statics/localcss/information.css' rel='stylesheet'>
-	<link href='/statics/localcss/addgoodspack.css' rel='stylesheet'>
-	<link href='/statics/localcss/mymessage.css' rel='stylesheet'>
-	<link href='/statics/localcss/messagelist.css' rel='stylesheet'>
-	<!-- add by bdqn_hl 2014-2-28 end-->
-	
-	<!-- 华丽丽滴分割线 北大青鸟 end 2014 -->
+	<link href="${pageContext.request.contextPath }/statics/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath }/statics/css/charisma-app.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath }/statics/css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+	<link href='${pageContext.request.contextPath }/statics/css/fullcalendar.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/css/fullcalendar.print.css' rel='stylesheet'  media='print'>
+	<link href='${pageContext.request.contextPath }/statics/css/chosen.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/css/uniform.default.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/css/colorbox.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/css/jquery.cleditor.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/css/jquery.noty.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/css/noty_theme_default.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/css/elfinder.min.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/css/elfinder.theme.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/css/jquery.iphone.toggle.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/css/opa-icons.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/css/uploadify.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/localcss/userlist.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/localcss/rolelist.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/localcss/authoritymanage.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/localcss/dicmanage.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/localcss/affiche.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/localcss/information.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/localcss/addgoodspack.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/localcss/mymessage.css' rel='stylesheet'>
+	<link href='${pageContext.request.contextPath }/statics/localcss/messagelist.css' rel='stylesheet'>
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
 	<!-- The fav icon -->
-	<link rel="shortcut icon" href="/statics/img/favicon.ico">
+	<link rel="shortcut icon" href="${pageContext.request.contextPath }/statics/img/favicon.ico">
 	<script>var tt = '${mList}';</script>
 </head>
 <body>
@@ -90,9 +85,9 @@
 				<a class="brand" href="/main.html"> <img alt="Charisma Logo" src="/statics/img/logo20.png" /> <span>SL会员商城</span></a>
 				<div class="btn-group pull-right" >
 					<ul class="nav">
-						<li><a href="#">你好，${user.loginCode}</a></li>
-						<li><a href="#">角色：${user.roleName}</a></li>
-						<li><a href="/main.html">首页</a></li>
+						<li><a href="#">你好，${user.logincode}</a></li>
+						<li><a href="#">角色：${user.rolename}</a></li>
+						<li><a href="/main.jsp">首页</a></li>
 						<li><a href="#">购物车</a></li>
 						<li><a href="#">留言板</a></li>
 						<li><a href="javascript:void();" class="btn-setting modifypwd">修改密码</a></li>
