@@ -66,7 +66,7 @@
 					<div class="form-horizontal" >
 						<fieldset>
 							<div class="input-prepend" title="登录账号" data-rel="tooltip">
-								<span class="add-on"><i class="icon-user"></i></span><input autofocus class="input-large span10" name="loginCode" id="logincode" type="text" value="" />
+								<span class="add-on"><i class="icon-user"></i></span><input autofocus class="input-large span10" name="logincode" id="logincode" type="text" value="" />
 							</div>
 							<div class="clearfix"></div>
 
@@ -82,6 +82,7 @@
 							<ul id="formtip"></ul>
 							<p class="center span5">
 							<button type="submit" class="btn btn-primary" id="loginBtn">登录</button>
+							<button type="reset" class="btn btn-primary" id="resetBtn">重　填</button>
 							</p>
 							
 						</fieldset>

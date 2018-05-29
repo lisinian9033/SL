@@ -14,10 +14,10 @@ public class AuUserServiceImpl implements AuUserService {
 	
 	@Resource
 	private AuUserDao auUserDao;
-	
+
 	@Override
 	public AuUser login(AuUser user) {
 		return auUserDao.login(user);
 	}
-
+	
 }
