@@ -33,5 +33,12 @@ public class AuUserController {
 		return result;
 	}
 
-	
+	/**
+	 * 注销
+	 */
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public String logout(HttpSession session) {
+		session.invalidate();// 消除session
+		return "pages/index";
+	}
 }

@@ -27,4 +27,9 @@
     from affiche
     where id = #{id,jdbcType=BIGINT}
   </select>
+  
+  <!-- 查询所有资讯列表 -->
+  <select id="GetAfficheList" resultType="Affiche">
+  select * from affiche
+  </select>
 </mapper>

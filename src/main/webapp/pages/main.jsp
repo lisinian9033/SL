@@ -32,7 +32,7 @@
 					<div class="box-header well" data-original-title>
 						<h2><i class="icon-file"></i> 资讯栏</h2>
 						<div class="box-icon">
-							<a style="display:block;width:60px;padding-right:1px;font-size:14px;" href="/informanage/portalinfoList.html">more >></a>
+							<a style="display:block;width:60px;padding-right:1px;font-size:14px;" href="/pages/informanage/portalinfoList.jsp">more >></a>
 						</div>
 					</div>
 					<div class="box-content">

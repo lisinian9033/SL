@@ -1,14 +1,11 @@
-package com.jbit.dao;
-
+package com.jbit.service;
 
 import java.util.List;
 
 import com.jbit.entity.Affiche;
 
-public interface AfficheDao {
-    Affiche selectByPrimaryKey(Long id);
-    
-    /**
+public interface AfficheService {
+	/**
      * 获取所有资讯列表
      */
     List<Affiche> GetAfficheList();
