@@ -22,16 +22,14 @@ $("#loginBtn").click(function(){
 		$("#formtip").html("");
 		$.ajax({
 			url:path+"/AuUserLogin",
-			type: 'GET',
-			data:{user:JSON.stringify(user)},
+			type: 'POST',
+			data:$("#loginForm").serializeArray(),
 			dataType: "json",
-			/*contentType: "application/json",*/
 			success:function(result){
 				if(result.success==true){//登录成功
-					alert("登陆成功！！！正在为您跳转首页....");
+					alert("登陆成功！！！正在为您跳转首页，请确定....");
 					window.location.href='../pages/main.html';
 				}else{
-					alert(3);
 					$("#formtip").css("color","red");
 					$("#formtip").html("登陆失败！请重试。");
 					$("#logincode").val('');
