@@ -62,7 +62,7 @@
 				
 					</div>
 					
-					<form id="loginForm">
+					<form id="loginForm" method="post">
 					<div class="form-horizontal" >
 						<fieldset>
 							<div class="input-prepend" title="登录账号" data-rel="tooltip">

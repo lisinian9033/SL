@@ -28,7 +28,7 @@ $("#loginBtn").click(function(){
 			success:function(result){
 				if(result.success==true){//登录成功
 					alert("登陆成功！！！正在为您跳转首页，请确定....");
-					window.location.href=path+'/pages/main.jsp';
+					window.location.href=path+'/afficheList';
 				}else{
 					$("#formtip").css("color","red");
 					$("#formtip").html("登陆失败！请重试。");

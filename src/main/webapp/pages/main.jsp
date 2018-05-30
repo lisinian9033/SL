@@ -42,7 +42,7 @@
 							<tr>
 								<td style="width:20px;padding:3px;"><span class="icon icon-color icon-info"/></td>
 								<td style=""><a href="/informanage/portalInfoDetail.html?id=${info.id}">${info.title}</a></td>
-								<td style="width:80px;"><fmt:formatDate value="${info.publishTime}" pattern="yyyy-MM-dd"/></td>
+								<td style="width:80px;"><fmt:formatDate value="${info.publishtime}" pattern="yyyy-MM-dd"/></td>
 							</tr>
 						  </c:forEach>
 						 </c:if>

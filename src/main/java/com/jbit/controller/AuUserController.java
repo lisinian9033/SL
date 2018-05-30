@@ -22,7 +22,7 @@ public class AuUserController {
 	
 	@RequestMapping(value="/AuUserLogin",method=RequestMethod.POST)
 	@ResponseBody
-	public JsonResult AuUserLogin(AuUser user,Model model,HttpSession session){
+	public JsonResult AuUserLogin(AuUser user,HttpSession session){
 		System.out.println(user);
 		JsonResult result = new JsonResult("登录失败！！");
 		AuUser au= auUserService.login(user);
