@@ -66,12 +66,12 @@
 					<div class="form-horizontal" >
 						<fieldset>
 							<div class="input-prepend" title="登录账号" data-rel="tooltip">
-								<span class="add-on"><i class="icon-user"></i></span><input autofocus class="input-large span10" name="logincode" id="logincode" type="text" value="admin" />
+								<span class="add-on"><i class="icon-user"></i></span><input autofocus class="input-large span10" name="logincode" id="logincode" type="text" value="" />
 							</div>
 							<div class="clearfix"></div>
 
 							<div class="input-prepend" title="登陆密码" data-rel="tooltip">
-								<span class="add-on"><i class="icon-lock"></i></span><input class="input-large span10" name="password" id="password" type="password" value="123456" />
+								<span class="add-on"><i class="icon-lock"></i></span><input class="input-large span10" name="password" id="password" type="password" value="" />
 							</div>
 							<div class="clearfix"></div>
 
